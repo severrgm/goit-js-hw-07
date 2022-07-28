@@ -34,15 +34,7 @@ function onImageZoomClick(event) {
   }
 
   instance = basicLightbox.create(
-    `<img src="${event.target.dataset.source}" width="800" height="600">`,
-    {
-      onShow: () => {
-        window.addEventListener("keydown", closeWindow);
-      },
-      onClose: () => {
-        window.removeEventListener("keydown", closeWindow);
-      },
-    }
+    `<img src="${event.target.dataset.source}" width="800" height="600">`
   );
 
   instance.show();
