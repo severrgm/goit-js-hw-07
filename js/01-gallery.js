@@ -45,6 +45,7 @@ function onModalCloseEscapePress(event) {
   const pressKey = event.code;
 
   if (pressKey !== "Escape") {
+    document.removeEventListener("keydown", onModalCloseEscapePress);
     return;
   }
 
